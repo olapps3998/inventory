@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-08-31 21:04:03
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 17:14:43
          compiled from ".\templates\in.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1058759a81753325c59-98535563%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1299459a9305ae583a7-59691329%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '62339ce81dd0555fcb2c63d2e7b423ade6ca1fa3' => 
     array (
       0 => '.\\templates\\in.tpl',
-      1 => 1451897311,
+      1 => 1504260876,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1058759a81753325c59-98535563',
+  'nocache_hash' => '1299459a9305ae583a7-59691329',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_59a9305b136ea6_20367811',
   'variables' => 
   array (
     'module' => 0,
@@ -49,10 +51,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'pageLink' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a8175364d765_24041298',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a8175364d765_24041298')) {function content_59a8175364d765_24041298($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_59a9305b136ea6_20367811')) {function content_59a9305b136ea6_20367811($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
 <style>
@@ -894,6 +894,10 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBbmDetail']['last']     
 											<input type="text" value="<?php echo $_smarty_tpl->tpl_vars['q']->value;?>
 " id="q" name="q" class="form-control" placeholder="Pencarian : Nomor Faktur Pembelian" style="float: right; width: 270px;">
 											<a href="in.php?module=in&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+											<a href="print_in_excel.php?f=trx_beli&act=print&q=<?php echo $_smarty_tpl->tpl_vars['q']->value;?>
+&startDate=<?php echo $_smarty_tpl->tpl_vars['startDate']->value;?>
+&endDate=<?php echo $_smarty_tpl->tpl_vars['endDate']->value;?>
+" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_in.php?act=print&q=<?php echo $_smarty_tpl->tpl_vars['q']->value;?>
 &startDate=<?php echo $_smarty_tpl->tpl_vars['startDate']->value;?>
 &endDate=<?php echo $_smarty_tpl->tpl_vars['endDate']->value;?>
@@ -995,6 +999,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['last']       = ($
 											<input type="text" value="<?php echo $_smarty_tpl->tpl_vars['q']->value;?>
 " id="q" name="q" class="form-control" placeholder="Pencarian : Nomor Faktur Pembelian" style="float: right; width: 270px;">
 											<a href="in.php?module=in&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+											<a href="print_in_excel.php?f=trx_beli&act=print&q=<?php echo $_smarty_tpl->tpl_vars['q']->value;?>
+" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_in.php?act=print&q=<?php echo $_smarty_tpl->tpl_vars['q']->value;?>
 " style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;

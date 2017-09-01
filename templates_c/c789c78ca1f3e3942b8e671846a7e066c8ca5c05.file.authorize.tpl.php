@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-08-31 20:59:49
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 17:03:19
          compiled from ".\templates\authorize.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1849559a816554174b6-80491438%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:802759a930675acec2-26254213%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c789c78ca1f3e3942b8e671846a7e066c8ca5c05' => 
     array (
       0 => '.\\templates\\authorize.tpl',
-      1 => 1417000801,
+      1 => 1504259078,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1849559a816554174b6-80491438',
+  'nocache_hash' => '802759a930675acec2-26254213',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a8165550b1f5_77603419',
+  'unifunc' => 'content_59a9306760a5e3_82215564',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a8165550b1f5_77603419')) {function content_59a8165550b1f5_77603419($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_59a9306760a5e3_82215564')) {function content_59a9306760a5e3_82215564($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
 <link rel="stylesheet" type="text/css" media="all" href="design/js/fancybox/jquery.fancybox.css">
@@ -103,6 +103,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div class="box-tools pull-right">
 								<div class="box-footer clearfix no-border">
 									<a href="print_authorize.php?act=print" target="_blank"><button class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
+									<a href="print_authorize_excel.php?f=authorize&act=print" target="_blank"><button class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 								</div>
 							</div>
 						</div><!-- /.box-header -->

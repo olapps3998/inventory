@@ -72,6 +72,7 @@
 							<div class="box-tools pull-right">
 								<div class="box-footer clearfix no-border">
 									<a href="print_authorize.php?act=print" target="_blank"><button class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
+									<a href="print_authorize_excel.php?f=authorize&act=print" target="_blank"><button class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 								</div>
 							</div>
 						</div><!-- /.box-header -->

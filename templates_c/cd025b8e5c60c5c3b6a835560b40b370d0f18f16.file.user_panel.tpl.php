@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-08-31 20:56:52
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 17:03:07
          compiled from ".\templates\user_panel.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1205059a815a46cef71-03506421%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1460659a9305ba64ce1-17029257%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1205059a815a46cef71-03506421',
+  'nocache_hash' => '1460659a9305ba64ce1-17029257',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a815a46e2ac9_71111627',
+  'unifunc' => 'content_59a9305ba73af5_43249284',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a815a46e2ac9_71111627')) {function content_59a815a46e2ac9_71111627($_smarty_tpl) {?><!-- Sidebar user panel -->
+<?php if ($_valid && !is_callable('content_59a9305ba73af5_43249284')) {function content_59a9305ba73af5_43249284($_smarty_tpl) {?><!-- Sidebar user panel -->
 <div class="user-panel">
 	<div class="pull-left image">
 		<?php if ($_smarty_tpl->tpl_vars['loginPhoto']->value!=''){?>

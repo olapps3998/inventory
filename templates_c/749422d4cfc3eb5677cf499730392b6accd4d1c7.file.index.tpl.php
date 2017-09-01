@@ -1,30 +1,30 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 14:00:50
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 17:08:20
          compiled from ".\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2485059a8157c7c0742-24216570%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2255459a9319456f4d6-28284371%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '749422d4cfc3eb5677cf499730392b6accd4d1c7' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1504249246,
+      1 => 1504249418,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2485059a8157c7c0742-24216570',
+  'nocache_hash' => '2255459a9319456f4d6-28284371',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a8157cabdda9_07487291',
   'variables' => 
   array (
     'nama_pt' => 0,
     'msg' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_59a931945a3494_42606483',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a8157cabdda9_07487291')) {function content_59a8157cabdda9_07487291($_smarty_tpl) {?><!doctype html>
+<?php if ($_valid && !is_callable('content_59a931945a3494_42606483')) {function content_59a931945a3494_42606483($_smarty_tpl) {?><!doctype html>
 <head>
 
 	<!-- General Metas -->
@@ -33,7 +33,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<title>Login Form <?php echo $_smarty_tpl->tpl_vars['nama_pt']->value;?>
 </title>
 	<meta name="description" content="This is inventory application system ">
-	<meta name="author" content="CV. ASFA Solution - asfasolution.co.id - agussaputra.com">
+	<meta name="author" content="<?php echo $_smarty_tpl->tpl_vars['nama_pt']->value;?>
+">
 	
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 

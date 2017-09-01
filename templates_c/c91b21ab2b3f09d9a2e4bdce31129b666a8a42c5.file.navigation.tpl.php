@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-08-31 20:56:52
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 17:03:07
          compiled from ".\templates\navigation.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1602959a815a448b293-35269380%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:77759a9305b9c4991-53043793%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1602959a815a448b293-35269380',
+  'nocache_hash' => '77759a9305b9c4991-53043793',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a815a4556660_29954283',
+  'unifunc' => 'content_59a9305b9d6443_30418605',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59a815a4556660_29954283')) {function content_59a815a4556660_29954283($_smarty_tpl) {?><!-- Header Navbar: style can be found in header.less -->
+<?php if ($_valid && !is_callable('content_59a9305b9d6443_30418605')) {function content_59a9305b9d6443_30418605($_smarty_tpl) {?><!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top" role="navigation">
 	<!-- Sidebar toggle button-->
 	<a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
