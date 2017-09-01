@@ -76,10 +76,10 @@ else{
 								$unit = "PCS";
 							}
 							
-							$unitPrice1 = rupiah($dtProduct['unitPrice1']);
-							$unitPrice2 = rupiah($dtProduct['unitPrice2']);
-							$unitPrice3 = rupiah($dtProduct['unitPrice3']);
-							$hpp = rupiah($dtProduct['hpp']);
+							$unitPrice1 = $dtProduct['unitPrice1']; //$unitPrice1 = rupiah($dtProduct['unitPrice1']);
+							$unitPrice2 = $dtProduct['unitPrice2']; //$unitPrice2 = rupiah($dtProduct['unitPrice2']);
+							$unitPrice3 = $dtProduct['unitPrice3']; //$unitPrice3 = rupiah($dtProduct['unitPrice3']);
+							$hpp = $dtProduct['hpp']; //$hpp = rupiah($dtProduct['hpp']);
 							
 							$content .= "
 								<tr valign='top'>
