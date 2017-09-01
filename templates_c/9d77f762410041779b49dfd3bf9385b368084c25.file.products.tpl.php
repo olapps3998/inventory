@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-08-31 20:57:18
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 16:25:17
          compiled from ".\templates\products.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1507259a815be129537-77913765%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9d77f762410041779b49dfd3bf9385b368084c25' => 
     array (
       0 => '.\\templates\\products.tpl',
-      1 => 1418032094,
+      1 => 1504257867,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_59a815be2d6c46_59732346',
   'variables' => 
   array (
     'q' => 0,
@@ -26,8 +28,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dataCategory' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a815be2d6c46_59732346',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59a815be2d6c46_59732346')) {function content_59a815be2d6c46_59732346($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -209,6 +209,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " id="q" name="q" class="form-control" placeholder="Pencarian : Kode atau Nama Produk" style="float: right; width: 270px;" required>
 									
 										<a href="#inline" class="modalbox" style="float: left;"><button class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+										<a href="print_products_excel.php?f=products&act=print&q=<?php echo $_smarty_tpl->tpl_vars['q']->value;?>
+" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 										<a href="print_products.php?act=print&q=<?php echo $_smarty_tpl->tpl_vars['q']->value;?>
 " style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 										&nbsp;&nbsp;&nbsp;
