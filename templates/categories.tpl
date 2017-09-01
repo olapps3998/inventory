@@ -104,6 +104,7 @@
 										<input type="text" id="q" name="q" value="{$q}" class="form-control" placeholder="Pencarian : Nama Kategori" style="float: right; width: 270px;" required>
 									
 										<a href="#inline" class="modalbox" style="float: left;"><button class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+										<a href="print_categories_excel.php?f=categories&act=print&q={$q}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 										<a href="print_categories.php?act=print&q={$q}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 										&nbsp;&nbsp;&nbsp;
 									</form>
