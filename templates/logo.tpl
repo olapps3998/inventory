@@ -1,3 +1,3 @@
 <a href="home.php" class="logo">
-	CV. ASFA SOLUTION
+	L.A.B. Inventory<!-- {$nama_pt}-->
 </a>

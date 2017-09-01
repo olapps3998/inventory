@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-08-31 20:56:52
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 13:51:26
          compiled from ".\templates\home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:423059a815a4016e64-06458556%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97d060df136bc68287855ad0037b446ebb85b73d' => 
     array (
       0 => '.\\templates\\home.tpl',
-      1 => 1451984856,
+      1 => 1504248681,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_59a815a4295223_11091019',
   'variables' => 
   array (
     'loginStaffNickName' => 0,
+    'nama_pt' => 0,
     'loginLastLogin' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a815a4295223_11091019',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59a815a4295223_11091019')) {function content_59a815a4295223_11091019($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -68,7 +69,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<section class="col-lg-12 connectedSortable">
 				
 					Hai <b><?php echo $_smarty_tpl->tpl_vars['loginStaffNickName']->value;?>
-</b>, Selamat datang di aplikasi inventory CV. ASFA Solution, Anda bisa melakukan pengolahan
+</b>, Selamat datang di aplikasi inventory <?php echo $_smarty_tpl->tpl_vars['nama_pt']->value;?>
+, Anda bisa melakukan pengolahan
 					data terkait kegiatan atau aktifitas pekerjaan Anda sesuai dengan level atau otorisasi kewenangan Anda melalui menu-menu yang disediakan.
 					<br><br>
 					Login Terakhir : <?php echo $_smarty_tpl->tpl_vars['loginLastLogin']->value;?>

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Inventory Application System CV. ASFA Solution</title>
+		<title>Inventory Application System {$nama_pt}</title>
 		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 		<script src="design/js/jquery-1.8.1.min.js" type="text/javascript"></script>
 		<!-- bootstrap 3.0.2 -->

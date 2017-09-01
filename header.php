@@ -40,4 +40,8 @@ $smarty->assign("loginStaffPosition", $_SESSION['position']);
 $smarty->assign("loginLastLogin", $dtUser['lastLogin']);
 $smarty->assign("loginPhoto", $dtUser['photo']);
 $smarty->assign("loginStaffLevel", $_SESSION['level']);
+
+$nama_pt = "LEMBAYUNGPAGI AMANAH BHUMI";
+$alamat_pt = "Jl. Diponegoro - Bojonegoro";
+$smarty->assign("nama_pt", $nama_pt);
 ?>

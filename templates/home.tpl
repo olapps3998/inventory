@@ -35,7 +35,7 @@
 				<!-- Left col -->
 				<section class="col-lg-12 connectedSortable">
 				
-					Hai <b>{$loginStaffNickName}</b>, Selamat datang di aplikasi inventory CV. ASFA Solution, Anda bisa melakukan pengolahan
+					Hai <b>{$loginStaffNickName}</b>, Selamat datang di aplikasi inventory {$nama_pt}, Anda bisa melakukan pengolahan
 					data terkait kegiatan atau aktifitas pekerjaan Anda sesuai dengan level atau otorisasi kewenangan Anda melalui menu-menu yang disediakan.
 					<br><br>
 					Login Terakhir : {$loginLastLogin}

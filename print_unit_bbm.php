@@ -40,14 +40,13 @@ else{
 						<tr valign='top'>
 							<td style='width: 150mm;' valign='middle'>
 								<div style='font-weight: bold; padding-bottom: 5px; font-size: 12pt;'>
-									CV. ASFA SOLUTION
+									".$nama_pt."
 								</div>
 							</td>
 							<td style='width: 83mm;'></td>
 						</tr>
 						<tr valign='top'>
-							<td><span style='font-size: 8pt;'>Jl. Pegadaian No. 38 01/01 Arjawinangun - Cirebon 45162<br>Hp. 08562121141
-								</span>
+							<td><span style='font-size: 8pt;'>".$alamat_pt."</span>
 							</td>
 							<td>
 								<span style='font-size: 11pt;'><b>BUKTI BARANG MASUK</b></span>

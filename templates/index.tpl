@@ -4,9 +4,9 @@
 	<!-- General Metas -->
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	<!-- Force Latest IE rendering engine -->
-	<title>Login Form CV. ASFA Solution</title>
+	<title>Login Form {$nama_pt}</title>
 	<meta name="description" content="This is inventory application system ">
-	<meta name="author" content="CV. ASFA Solution - asfasolution.co.id - agussaputra.com">
+	<meta name="author" content="{$nama_pt}">
 	
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
@@ -26,7 +26,7 @@
 		
 		<div class="form-bg">
 			<form method="POST" action="index.php?module=login&act=submit">
-				<h2>LOGIN CV. ASFA SOLUTION</h2>
+				<h2>LOGIN {$nama_pt}</h2>
 				<p><input type="text" name="username" placeholder="Username" required></p>
 				<p><input type="password" name="password" placeholder="Password" required></p>
 				<button type="submit"></button>
@@ -35,9 +35,9 @@
 
 	
 		<p class="forgot">
-			Copyright &copy; CV. ASFA Solution <br>
-			Jl. Pegadaian No. 38 01/01 Arjawinangun<br>
-			Cirebon, Jawa Barat 45162 Indonesia
+			Copyright &copy; AIMPGLOBAL <br>
+			Kompleks Ruko RMI Blok B-26<br>
+			Jl. Ngagel Jaya Selatan - Surabaya
 		
 		</p>
 

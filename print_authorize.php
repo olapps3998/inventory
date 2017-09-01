@@ -27,9 +27,9 @@ else{
 						<tr valign='top'>
 							<td style='width: 290mm;' valign='middle'>
 								<div style='font-weight: bold; padding-bottom: 5px; font-size: 12pt;'>
-									CV. ASFA SOLUTION
+									".$nama_pt."
 								</div>
-								<span style='font-size: 10pt;'>Jl. Pegadaian No. 38 01/01 Arjawinangun - Cirebon 45162 Indonesia, Hp. 08562121141</span>
+								<span style='font-size: 10pt;'>".$alamat_pt."</span>
 							</td>
 						</tr>
 					</table>
