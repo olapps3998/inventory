@@ -562,6 +562,7 @@
 											<input type="text" id="q" name="q" value="{$q}" class="form-control" placeholder="Pencarian : Nomor PO" style="float: right; width: 270px;" required>
 										
 											<a href="spb.php?module=spb&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+											<a href="print_spb_excel.php?f=spb&act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_spb.php?act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>
@@ -621,6 +622,7 @@
 											<input type="text" id="q" name="q" value="{$q}" class="form-control" placeholder="Pencarian : Nomor PO" style="float: right; width: 270px;">
 										
 											<a href="spb.php?module=spb&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+											<a href="print_spb_excel.php?f=spb&act=print&q={$q}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_spb.php?act=print&q={$q}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>

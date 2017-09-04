@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 17:03:07
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-05 06:15:30
          compiled from ".\templates\navigation.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:77759a9305b9c4991-53043793%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c91b21ab2b3f09d9a2e4bdce31129b666a8a42c5' => 
     array (
       0 => '.\\templates\\navigation.tpl',
-      1 => 1451365137,
+      1 => 1504566557,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_59a9305b9d6443_30418605',
   'variables' => 
   array (
     'loginStaffName' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'loginStaffPosition' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a9305b9d6443_30418605',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59a9305b9d6443_30418605')) {function content_59a9305b9d6443_30418605($_smarty_tpl) {?><!-- Header Navbar: style can be found in header.less -->
 <nav class="navbar navbar-static-top" role="navigation">

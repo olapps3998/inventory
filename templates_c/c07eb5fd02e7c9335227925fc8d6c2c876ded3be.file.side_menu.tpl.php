@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 17:03:07
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-05 06:15:30
          compiled from ".\templates\side_menu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1617559a9305baef8a2-24320740%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c07eb5fd02e7c9335227925fc8d6c2c876ded3be' => 
     array (
       0 => '.\\templates\\side_menu.tpl',
-      1 => 1451365438,
+      1 => 1504566557,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_59a9305bc99bb1_95709803',
   'variables' => 
   array (
     'dataAuthorize' => 0,
     'loginStaffLevel' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a9305bc99bb1_95709803',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59a9305bc99bb1_95709803')) {function content_59a9305bc99bb1_95709803($_smarty_tpl) {?><!-- sidebar menu: : style can be found in sidebar.less -->
 <ul class="sidebar-menu">

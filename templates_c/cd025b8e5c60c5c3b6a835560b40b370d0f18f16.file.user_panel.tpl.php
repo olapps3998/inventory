@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-09-01 17:03:07
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-05 06:15:30
          compiled from ".\templates\user_panel.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1460659a9305ba64ce1-17029257%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cd025b8e5c60c5c3b6a835560b40b370d0f18f16' => 
     array (
       0 => '.\\templates\\user_panel.tpl',
-      1 => 1416296180,
+      1 => 1504566557,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_59a9305ba73af5_43249284',
   'variables' => 
   array (
     'loginPhoto' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'loginStaffPosition' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59a9305ba73af5_43249284',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59a9305ba73af5_43249284')) {function content_59a9305ba73af5_43249284($_smarty_tpl) {?><!-- Sidebar user panel -->
 <div class="user-panel">
