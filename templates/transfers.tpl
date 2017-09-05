@@ -407,6 +407,7 @@
 								<div class="box-tools pull-right">
 									<div class="box-footer clearfix no-border">
 										<a href="print_transfers.php?act=print" target="_blank"><button class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
+										<a href="print_transfers_excel.php?f=transfers&act=print" target="_blank"><button class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 										<a href="transfers.php?module=transfer&act=add"><button class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
 									</div>
 								</div>

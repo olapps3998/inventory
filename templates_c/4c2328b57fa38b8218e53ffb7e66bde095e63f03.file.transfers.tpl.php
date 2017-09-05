@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-09-05 10:41:47
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-05 10:54:57
          compiled from ".\templates\transfers.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1544159ae1cfba2d412-17616347%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c2328b57fa38b8218e53ffb7e66bde095e63f03' => 
     array (
       0 => '.\\templates\\transfers.tpl',
-      1 => 1504566557,
+      1 => 1504583643,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_59ae1cfbc01d48_45350163',
   'variables' => 
   array (
     'module' => 0,
@@ -38,8 +40,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'pageLink' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59ae1cfbc01d48_45350163',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59ae1cfbc01d48_45350163')) {function content_59ae1cfbc01d48_45350163($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -581,6 +581,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['dataDetail']['last']       =
 								<div class="box-tools pull-right">
 									<div class="box-footer clearfix no-border">
 										<a href="print_transfers.php?act=print" target="_blank"><button class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
+										<a href="print_transfers_excel.php?f=transfers&act=print" target="_blank"><button class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 										<a href="transfers.php?module=transfer&act=add"><button class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
 									</div>
 								</div>
