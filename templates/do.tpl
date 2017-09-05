@@ -517,6 +517,7 @@
 											<input type="text" id="q" name="q" value="{$q}" class="form-control" placeholder="Pencarian : Nomor DO" style="float: right; width: 270px;">
 										
 											<a href="do.php?module=do&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+											<a href="print_do_excel.php?f=do&act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_do.php?act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>
@@ -574,6 +575,7 @@
 											<input type="text" id="q" name="q" value="{$q}" class="form-control" placeholder="Pencarian : Nomor DO" style="float: right; width: 270px;" required>
 										
 											<a href="do.php?module=do&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+											<a href="print_do_excel.php?f=do&act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_do.php?act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>
