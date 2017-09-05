@@ -428,6 +428,7 @@
 											<input type="text" value="{$startDate}" id="startDate" name="startDate" class="form-control" placeholder="Periode Awal" style="float: right; width: 115px;">
 											<input type="text" value="{$q}" id="q" name="q" class="form-control" placeholder="Pencarian : Nomor Bukti Pembayaran" style="float: right; width: 270px;" required>
 											<a href="pay_in.php?module=payin&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+											<a href="print_pay_in_excel.php?f=pay_in&act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_pay_in.php?act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>
@@ -489,6 +490,7 @@
 											<input type="text" value="{$startDate}" id="startDate" name="startDate" class="form-control" placeholder="Periode Awal" style="float: right; width: 115px;">
 											<input type="text" value="{$q}" id="q" name="q" class="form-control" placeholder="Pencarian : Nomor Bukti Pembayaran" style="float: right; width: 270px;">
 											<a href="pay_in.php?module=payin&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>
+											<a href="print_pay_in_excel.php?f=pay_in&act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_pay_in.php?act=print&q={$q}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>
