@@ -63,8 +63,9 @@
 													{/if}
 												{/section}
 											</select>
-										
+											<a href="print_report_stock_products_excel.php?f=rpt_stok&act=print&categoryID={$categoryID}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_report_stock_products.php?act=print&categoryID={$categoryID}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
+											
 											&nbsp;&nbsp;&nbsp;
 										</form>
 									</div>
