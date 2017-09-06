@@ -619,6 +619,7 @@
 											<input type="text" id="invoiceNo" value="{$invoiceNo}" name="invoiceNo" class="form-control" placeholder="No Faktur Pembelian" style="float: right; width: 200px; margin-right: 5px;">
 										
 											<!--<a href="debts.php?module=debt&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>-->
+											<a href="print_debts_excel.php?f=debts&act=print&supplierID={$supplierID}&startDate={$startDate}&endDate={$endDate}&invoiceNo={$invoiceNo}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_debts.php?act=print&supplierID={$supplierID}&startDate={$startDate}&endDate={$endDate}&invoiceNo={$invoiceNo}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>
@@ -687,6 +688,7 @@
 											<input type="text" id="invoiceNo" name="invoiceNo" class="form-control" placeholder="No Faktur Pembelian" style="float: right; width: 200px; margin-right: 5px;">
 										
 											<!--<a href="debts.php?module=debt&act=add" style="float: left;"><button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add</button></a>-->
+											<a href="print_debts_excel.php?f=debts&act=print&supplierID={$supplierID}&startDate={$startDate}&endDate={$endDate}&invoiceNo={$invoiceNo}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_debts.php?act=print&supplierID={$supplierID}&startDate={$startDate}&endDate={$endDate}&invoiceNo={$invoiceNo}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>
