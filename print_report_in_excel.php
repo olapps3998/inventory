@@ -36,14 +36,13 @@ else{
 						<tr valign='top'>
 							<td style='width: 150mm;' valign='middle'>
 								<div style='font-weight: bold; padding-bottom: 5px; font-size: 12pt;'>
-									CV. ASFA SOLUTION
+									".$nama_pt."
 								</div>
 							</td>
 							<td style='width: 83mm;'></td>
 						</tr>
 						<tr valign='top'>
-							<td><span style='font-size: 8pt;'>Jl. Pegadaian No. 38 01/01 Arjawinangun - Cirebon 45162 Indonesia <br>Hp. 08562121141
-								</span>
+							<td><span style='font-size: 8pt;'>".$alamat_pt."</span>
 							</td>
 							<td>
 								<span style='font-size: 11pt;'><b>LAPORAN TRANSAKSI PEMBELIAN</b><br>Periode : $_GET[startDate] s/d $_GET[endDate]</span>
@@ -99,10 +98,10 @@ else{
 							$sum = array();
 							while ($dtDetail = mysqli_fetch_array($sqlDetail))
 							{
-								$price = rupiah($dtDetail['price']);
+								$price = $dtDetail['price']; //$price = rupiah($dtDetail['price']);
 								$subt = $dtDetail['price'] * $dtDetail['receiveQty'];
 								$sum[] = $subt;
-								$subtotal = rupiah($subt);
+								$subtotal = $subt; //$subtotal = rupiah($subt);
 								
 								$grand = array_sum($sum);
 								
@@ -118,7 +117,7 @@ else{
 								";
 								$k++;
 							}
-							$grandtotal = rupiah($grand);
+							$grandtotal = $grand; //$grandtotal = rupiah($grand);
 							$content .= "<tr valign='top'>
 											<td colspan='8' style='text-align: right;'><b>Total</b></td>
 											<td style='padding: 2px 0px 2px 0px; font-size: 9pt; text-align: right;'>$grandtotal</td>
@@ -131,11 +130,14 @@ else{
 					</table>
 				
 					";
+		header("Content-type: application/vnd-ms-excel");
+		header("Content-Disposition: attachment; filename=".$_GET["f"].".xls");
+		echo $content;
 	}
 	
-	ob_end_clean();
+	//ob_end_clean();
 	// conversion HTML => PDF
-	try
+	/*try
 	{
 		$html2pdf = new HTML2PDF('L', array('240', '130'),'fr', false, 'ISO-8859-15',array(2, 2, 2, 2)); //setting ukuran kertas dan margin pada dokumen anda
 		// $html2pdf->setModeDebug();
@@ -143,6 +145,6 @@ else{
 		$html2pdf->writeHTML($content, isset($_GET['vuehtml']));
 		$html2pdf->Output($filename);
 	}
-	catch(HTML2PDF_exception $e) { echo $e; }
+	catch(HTML2PDF_exception $e) { echo $e; }*/
 }
 ?>

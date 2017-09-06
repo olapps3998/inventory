@@ -15,9 +15,11 @@ else{
 	require ("includes/html2pdf/html2pdf.class.php");
 	
 	$act = $_GET['act'];
-	$q = mysqli_real_escape_string($connect, $_GET['q']);
 	$sDate = mysqli_real_escape_string($connect, $_GET['startDate']);
 	$eDate = mysqli_real_escape_string($connect, $_GET['endDate']);
+	
+	$smarty->assign("startDate", $sDate);
+	$smarty->assign("endDate", $eDate);
 	
 	$s2Date = explode("-", $sDate);
 	$e2Date = explode("-", $eDate);
@@ -29,24 +31,23 @@ else{
 	{
 		$now = date('Y-m-d');
 		
-		$filename="laporan_pembelian.pdf";
+		$filename="laporan_penjualan.pdf";
 		$content = ob_get_clean();
 		
 		$content = "<table style='padding-bottom: 10px; width: 240mm;'>
 						<tr valign='top'>
 							<td style='width: 150mm;' valign='middle'>
 								<div style='font-weight: bold; padding-bottom: 5px; font-size: 12pt;'>
-									CV. ASFA SOLUTION
+									".$nama_pt."
 								</div>
 							</td>
 							<td style='width: 83mm;'></td>
 						</tr>
 						<tr valign='top'>
-							<td><span style='font-size: 8pt;'>Jl. Pegadaian No. 38 01/01 Arjawinangun - Cirebon 45162 Indonesia <br>Hp. 08562121141
-								</span>
+							<td><span style='font-size: 8pt;'>".$alamat_pt."</span>
 							</td>
 							<td>
-								<span style='font-size: 11pt;'><b>LAPORAN TRANSAKSI PEMBELIAN</b><br>Periode : $_GET[startDate] s/d $_GET[endDate]</span>
+								<span style='font-size: 11pt;'><b>LAPORAN TRANSAKSI PENJUALAN</b></span>
 							</td>
 						</tr>
 					</table>
@@ -54,7 +55,7 @@ else{
 						<tr>
 							<th style='width: 10mm; padding: 5px 0px 5px 0px; font-size: 9pt; border-top: 1px solid #000; border-bottom: 1px solid #000;'>NO.</th>
 							<th style='width: 23mm; padding: 5px 0px 5px 0px; font-size: 9pt; border-top: 1px solid #000; border-bottom: 1px solid #000;'>NO FAKTUR</th>
-							<th style='width: 23mm; padding: 5px 0px 5px 0px; font-size: 9pt; border-top: 1px solid #000; border-bottom: 1px solid #000;'>NO BBM</th>
+							<th style='width: 23mm; padding: 5px 0px 5px 0px; font-size: 9pt; border-top: 1px solid #000; border-bottom: 1px solid #000;'>NO DO</th>
 							<th style='width: 22mm; padding: 5px 0px 5px 0px; font-size: 9pt; border-top: 1px solid #000; border-bottom: 1px solid #000;'>TGL</th>
 							<th style='width: 10mm; padding: 5px 0px 5px 0px; font-size: 9pt; border-top: 1px solid #000; border-bottom: 1px solid #000;'>NO</th>
 							<th style='width: 80mm; padding: 5px 0px 5px 0px; font-size: 9pt; border-top: 1px solid #000; border-bottom: 1px solid #000;'>NAMA PRODUK</th>
@@ -63,32 +64,34 @@ else{
 							<th style='width: 25mm; padding: 5px 0px 5px 0px; font-size: 9pt; border-top: 1px solid #000; border-bottom: 1px solid #000;'>SUBTOTAL</th>
 						</tr>";
 						
-						// showing the buy invoice
-						if ($_GET['startDate'] != '' || $_GET['endDate'] != '')
+						// showing the sales invoice
+						if ($_GET['startDate'] != '' && $_GET['endDate'] != '')
 						{
-							$queryBuy = "SELECT * FROM as_buy_transactions WHERE invoiceDate BETWEEN '$startDate' AND '$endDate' ORDER BY invoiceID DESC";
+							$querySales = "SELECT * FROM as_sales_transactions WHERE invoiceDate BETWEEN '$startDate' AND '$endDate' ORDER BY invoiceDate DESC";
 						}
 						else
 						{
-							$queryBuy = "SELECT * FROM as_buy_transactions ORDER BY invoiceID DESC";
+							$querySales = "SELECT * FROM as_sales_transactions ORDER BY invoiceDate DESC";
 						}
-						$sqlBuy = mysqli_query($connect, $queryBuy);
+						
+						$sqlSales = mysqli_query($connect, $querySales);
 						
 						// fetch data
 						$i = 1;
-						while ($dtBuy = mysqli_fetch_array($sqlBuy))
+						
+						while ($dtSales = mysqli_fetch_array($sqlSales))
 						{
-							$invoiceDate = tgl_indo2($dtBuy['invoiceDate']);
+							$invoiceDate = tgl_indo2($dtSales['invoiceDate']);
 							
-							// showing up the detail bbm
-							$queryDetail = "SELECT * FROM as_detail_bbm WHERE bbmNo = '$dtBuy[bbmNo]'";
+							// showing up the detail do
+							$queryDetail = "SELECT * FROM as_detail_do WHERE doNo = '$dtSales[doNo]'";
 							$sqlDetail = mysqli_query($connect, $queryDetail);
 							
 							$content .= "
 									<tr valign='top'>
 										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$i</td>
-										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$dtBuy[invoiceNo]</td>
-										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$dtBuy[bbmNo]</td>
+										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$dtSales[invoiceNo]</td>
+										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$dtSales[doNo]</td>
 										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$invoiceDate</td>
 										<td colspan='4'></td>
 									</tr>
@@ -99,10 +102,10 @@ else{
 							$sum = array();
 							while ($dtDetail = mysqli_fetch_array($sqlDetail))
 							{
-								$price = rupiah($dtDetail['price']);
-								$subt = $dtDetail['price'] * $dtDetail['receiveQty'];
+								$price = $dtDetail['price']; //$price = rupiah($dtDetail['price']);
+								$subt = $dtDetail['price'] * $dtDetail['deliveredQty'];
 								$sum[] = $subt;
-								$subtotal = rupiah($subt);
+								$subtotal = $subt; //$subtotal = rupiah($subt);
 								
 								$grand = array_sum($sum);
 								
@@ -112,13 +115,13 @@ else{
 										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$k</td>
 										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$dtDetail[productName]</td>
 										<td style='padding: 2px 25px 2px 0px; font-size: 9pt; text-align: right;'>$price</td>
-										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$dtDetail[receiveQty]</td>
+										<td style='padding: 2px 0px 2px 0px; font-size: 9pt;'>$dtDetail[deliveredQty]</td>
 										<td style='padding: 2px 0px 2px 0px; font-size: 9pt; text-align: right;'>$subtotal</td>
 									</tr>
 								";
 								$k++;
 							}
-							$grandtotal = rupiah($grand);
+							$grandtotal = $grand; //$grandtotal = rupiah($grand);
 							$content .= "<tr valign='top'>
 											<td colspan='8' style='text-align: right;'><b>Total</b></td>
 											<td style='padding: 2px 0px 2px 0px; font-size: 9pt; text-align: right;'>$grandtotal</td>
@@ -131,11 +134,14 @@ else{
 					</table>
 				
 					";
+		header("Content-type: application/vnd-ms-excel");
+		header("Content-Disposition: attachment; filename=".$_GET["f"].".xls");
+		echo $content;
 	}
 	
-	ob_end_clean();
+	//ob_end_clean();
 	// conversion HTML => PDF
-	try
+	/*try
 	{
 		$html2pdf = new HTML2PDF('L', array('240', '130'),'fr', false, 'ISO-8859-15',array(2, 2, 2, 2)); //setting ukuran kertas dan margin pada dokumen anda
 		// $html2pdf->setModeDebug();
@@ -143,6 +149,6 @@ else{
 		$html2pdf->writeHTML($content, isset($_GET['vuehtml']));
 		$html2pdf->Output($filename);
 	}
-	catch(HTML2PDF_exception $e) { echo $e; }
+	catch(HTML2PDF_exception $e) { echo $e; }*/
 }
 ?>

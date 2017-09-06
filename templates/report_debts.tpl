@@ -87,6 +87,7 @@
 													{/if}
 												{/section}
 											</select>
+											<a href="print_report_debts_excel.php?f=rpt_debts&act=print&supplierID={$supplierID}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_report_debts.php?act=print&supplierID={$supplierID}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;
 										</form>
@@ -156,7 +157,7 @@
 													<option value="{$dataSupplier[dataSupplier].supplierID}">{$dataSupplier[dataSupplier].supplierName} [ Kode : {$dataSupplier[dataSupplier].supplierCode} ]</option>
 												{/section}
 											</select>
-											
+											<a href="print_report_debts_excel.php?f=rpt_debts&act=print&supplierID={$supplierID}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_report_debts.php?act=print&supplierID={$supplierID}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>

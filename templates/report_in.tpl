@@ -78,6 +78,7 @@
 											<button type="submit" class="btn btn-default pull-right"><i class="fa fa-search"></i> Search</button>
 											<input type="text" value="{$endDate}" id="endDate" name="endDate" class="form-control" placeholder="Periode Akhir" style="float: right; width: 150px; margin-right: 5px;">
 											<input type="text" value="{$startDate}" id="startDate" name="startDate" class="form-control" placeholder="Periode Awal" style="float: right; width: 150px; margin-right: 5px;">
+											<a href="print_report_in_excel.php?f=rpt_in&act=print&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_report_in.php?act=print&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
 										</form>

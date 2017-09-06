@@ -86,7 +86,7 @@
 													{/if}
 												{/section}
 											</select>
-										
+											<a href="print_report_receives_excel.php?f=rpt_receives&act=print&customerID={$customerID}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_report_receives.php?act=print&customerID={$customerID}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;
 										</form>
@@ -154,6 +154,7 @@
 													<option value="{$dataCustomer[dataCustomer].customerID}">{$dataCustomer[dataCustomer].customerName} [ Kode : {$dataCustomer[dataCustomer].customerCode} ]</option>
 												{/section}
 											</select>
+											<a href="print_report_receives_excel.php?f=rpt_receives&act=print&customerID={$customerID}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
 											<a href="print_report_receives.php?act=print&customerID={$customerID}&startDate={$startDate}&endDate={$endDate}" style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;
 										</form>

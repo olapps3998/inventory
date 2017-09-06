@@ -1,34 +1,34 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-09-06 15:02:03
-         compiled from ".\templates\report_in.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2945659ae94c8126d00-21135640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-06 15:08:05
+         compiled from ".\templates\report_out.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1959759afac06b7e3f5-62007389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '6b5929e380d10b2eb5aaab641ff3a0a05c1ad370' => 
+    'ce2862c3f6919b9cc2af463626d07a2f563012a9' => 
     array (
-      0 => '.\\templates\\report_in.tpl',
-      1 => 1504684492,
+      0 => '.\\templates\\report_out.tpl',
+      1 => 1504685102,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2945659ae94c8126d00-21135640',
+  'nocache_hash' => '1959759afac06b7e3f5-62007389',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_59ae94c81a56b6_40536885',
+  'unifunc' => 'content_59afac06c12cd7_87349083',
   'variables' => 
   array (
     'module' => 0,
     'act' => 0,
     'startDate' => 0,
     'endDate' => 0,
-    'dataBuy' => 0,
+    'dataSales' => 0,
     'pageLink' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59ae94c81a56b6_40536885')) {function content_59ae94c81a56b6_40536885($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_59afac06c12cd7_87349083')) {function content_59afac06c12cd7_87349083($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 
 <style>
@@ -101,7 +101,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<!-- TO DO List -->
 					<div class="box box-primary">
 						
-						<?php if ($_smarty_tpl->tpl_vars['module']->value=='in'&&$_smarty_tpl->tpl_vars['act']->value=='search'){?>
+						<?php if ($_smarty_tpl->tpl_vars['module']->value=='out'&&$_smarty_tpl->tpl_vars['act']->value=='search'){?>
 						
 							<div class="box-header">
 								<i class="ion ion-clipboard">Periode : <?php echo $_smarty_tpl->tpl_vars['startDate']->value;?>
@@ -110,18 +110,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<div class="box-tools pull-right">
 									<div class="box-footer clearfix no-border">
 									
-										<form method="GET" action="report_in.php">
-											<input type="hidden" name="module" value="in">
+										<form method="GET" action="report_out.php">
+											<input type="hidden" name="module" value="out">
 											<input type="hidden" name="act" value="search">
 											<button type="submit" class="btn btn-default pull-right"><i class="fa fa-search"></i> Search</button>
 											<input type="text" value="<?php echo $_smarty_tpl->tpl_vars['endDate']->value;?>
 " id="endDate" name="endDate" class="form-control" placeholder="Periode Akhir" style="float: right; width: 150px; margin-right: 5px;">
 											<input type="text" value="<?php echo $_smarty_tpl->tpl_vars['startDate']->value;?>
 " id="startDate" name="startDate" class="form-control" placeholder="Periode Awal" style="float: right; width: 150px; margin-right: 5px;">
-											<a href="print_report_in_excel.php?f=rpt_in&act=print&startDate=<?php echo $_smarty_tpl->tpl_vars['startDate']->value;?>
+											<a href="print_report_out_excel.php?f=rpt_out&act=print&startDate=<?php echo $_smarty_tpl->tpl_vars['startDate']->value;?>
 &endDate=<?php echo $_smarty_tpl->tpl_vars['endDate']->value;?>
 " style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-file-o"></i> Excel</button></a>
-											<a href="print_report_in.php?act=print&startDate=<?php echo $_smarty_tpl->tpl_vars['startDate']->value;?>
+											<a href="print_report_out.php?act=print&startDate=<?php echo $_smarty_tpl->tpl_vars['startDate']->value;?>
 &endDate=<?php echo $_smarty_tpl->tpl_vars['endDate']->value;?>
 " style="float: left;" target="_blank"><button type="button" class="btn btn-default pull-right"><i class="fa fa-print"></i> Print PDF</button></a>
 											&nbsp;&nbsp;&nbsp;
@@ -139,48 +139,48 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 												<th>NO <i class="fa fa-sort"></i></th>
 												<th>NO INVOICE <i class="fa fa-sort"></i></th>
 												<th>TGL <i class="fa fa-sort"></i></th>
-												<th>NO BBM <i class="fa fa-sort"></i></th>
+												<th>NO DO <i class="fa fa-sort"></i></th>
 												<th>GRANDTOTAL <i class="fa fa-sort"></i></th>
 												<th>OPERATOR <i class="fa fa-sort"></i></th>
 											</tr>
 										</thead>
 										<tbody>
-											<?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['name'] = 'dataBuy';
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['dataBuy']->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['show'] = true;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['loop'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['step'] = 1;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['loop']-1;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['show']) {
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['loop'];
-    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['total'] == 0)
-        $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['show'] = false;
+											<?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['name'] = 'dataSales';
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['dataSales']->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['show'] = true;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['loop'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['step'] = 1;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['loop']-1;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['show']) {
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['loop'];
+    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['total'] == 0)
+        $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['show'] = false;
 } else
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['total'] = 0;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['show']):
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['total'] = 0;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['show']):
 
-            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['iteration'] = 1;
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['total'];
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['iteration']++):
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['iteration'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['iteration'] == 1);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['total']);
+            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['iteration'] = 1;
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['total'];
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['iteration']++):
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['iteration'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['iteration'] == 1);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['dataSales']['total']);
 ?>
 												<tr>
-													<td><?php echo $_smarty_tpl->tpl_vars['dataBuy']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataBuy']['index']]['no'];?>
+													<td><?php echo $_smarty_tpl->tpl_vars['dataSales']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataSales']['index']]['no'];?>
 </td>
-													<td><?php echo $_smarty_tpl->tpl_vars['dataBuy']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataBuy']['index']]['invoiceNo'];?>
+													<td><?php echo $_smarty_tpl->tpl_vars['dataSales']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataSales']['index']]['invoiceNo'];?>
 </td>
-													<td><?php echo $_smarty_tpl->tpl_vars['dataBuy']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataBuy']['index']]['invoiceDate'];?>
+													<td><?php echo $_smarty_tpl->tpl_vars['dataSales']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataSales']['index']]['invoiceDate'];?>
 </td>
-													<td><?php echo $_smarty_tpl->tpl_vars['dataBuy']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataBuy']['index']]['bbmNo'];?>
+													<td><?php echo $_smarty_tpl->tpl_vars['dataSales']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataSales']['index']]['doNo'];?>
 </td>
-													<td><?php echo $_smarty_tpl->tpl_vars['dataBuy']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataBuy']['index']]['grandtotal'];?>
+													<td><?php echo $_smarty_tpl->tpl_vars['dataSales']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataSales']['index']]['grandtotal'];?>
 </td>
-													<td><?php echo $_smarty_tpl->tpl_vars['dataBuy']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataBuy']['index']]['staffName'];?>
+													<td><?php echo $_smarty_tpl->tpl_vars['dataSales']->value[$_smarty_tpl->getVariable('smarty')->value['section']['dataSales']['index']]['staffName'];?>
 </td>
 												</tr>
 											<?php endfor; endif; ?>
@@ -189,7 +189,6 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['last']       = ($
 								</div>
 							
 							</div><!-- /.box-body -->
-							
 							<div class="box-header">
 								<i class="ion ion-clipboard"></i>
 								<div class="box-tools pull-left">
@@ -206,8 +205,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['dataBuy']['last']       = ($
 								<div class="box-tools pull-right">
 									<div class="box-footer clearfix no-border">
 									
-										<form method="GET" action="report_in.php">
-											<input type="hidden" name="module" value="in">
+										<form method="GET" action="report_out.php">
+											<input type="hidden" name="module" value="out">
 											<input type="hidden" name="act" value="search">
 											<button type="submit" class="btn btn-default pull-right"><i class="fa fa-search"></i> Search</button>
 											<input type="text" value="<?php echo $_smarty_tpl->tpl_vars['endDate']->value;?>
