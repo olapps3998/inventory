@@ -69,4 +69,4 @@
 		<script type="text/javascript" src="design/js/development-bundle/ui/jquery.ui.datepicker.js"></script>
 		<script type="text/javascript" src="design/js/development-bundle/ui/jquery.ui.widget.js"></script>		
 	</head>
-	<body class="skin-blue">
+	<body class="skin-red">

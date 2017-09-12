@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-09-05 06:15:30
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-09 13:34:45
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2683559a9305b9111b6-86462621%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1504566557,
+      1 => 1504938881,
       2 => 'file',
     ),
   ),
@@ -95,4 +95,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<script type="text/javascript" src="design/js/development-bundle/ui/jquery.ui.datepicker.js"></script>
 		<script type="text/javascript" src="design/js/development-bundle/ui/jquery.ui.widget.js"></script>		
 	</head>
-	<body class="skin-blue"><?php }} ?>
+	<body class="skin-red"><?php }} ?>

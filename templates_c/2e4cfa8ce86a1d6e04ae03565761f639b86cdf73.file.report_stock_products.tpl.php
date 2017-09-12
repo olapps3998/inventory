@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2017-09-05 19:11:52
+<?php /* Smarty version Smarty-3.1.11, created on 2017-09-09 12:04:39
          compiled from ".\templates\report_stock_products.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:769359ae935355c443-64820442%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2e4cfa8ce86a1d6e04ae03565761f639b86cdf73' => 
     array (
       0 => '.\\templates\\report_stock_products.tpl',
-      1 => 1504613504,
+      1 => 1504893319,
       2 => 'file',
     ),
   ),
